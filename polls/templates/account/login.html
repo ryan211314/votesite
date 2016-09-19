@@ -1,0 +1,28 @@
+
+
+{% extends "base.html" %}
+
+
+{% block signcontent %}
+      <form class="form-signin" action="" method="post">{% csrf_token %}
+        <h2 class="form-signin-heading">Please sign in</h2>
+        <label for="inputEmail" class="sr-only">Account</label>
+		
+        <input type="text" id="inputEmail"  name="account" class="form-control" placeholder="Please input account" required autofocus>
+		
+        <label for="inputPassword" class="sr-only">Password</label>
+		
+        <input type="password" name="password" id="inputPassword" class="form-control" placeholder="Password" required>
+        <div class="checkbox">
+          <label>
+            <input type="checkbox" value="remember-me"> Remember me
+          </label>
+        </div>
+		<div>
+		<a href="{% url 'polls:register' %}">register new accout</a>
+		</div>
+        <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
+      </form>
+{% endblock %}
+
+
