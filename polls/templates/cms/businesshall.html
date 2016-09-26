@@ -1,0 +1,364 @@
+{% extends "cms/base.html" %}
+    {% block content %}
+			{% load static %}
+			<div class="page-header">
+							<h1>
+								办事大厅
+								<small>
+									<i class="ace-icon fa fa-angle-double-right"></i>
+									总览
+								</small>
+							</h1>
+			</div><!-- /.page-header -->
+
+			<div class="row">
+				<div class="col-xs-12">
+					<!-- PAGE CONTENT BEGINS -->
+					<div class="alert alert-block alert-success">
+						<button type="button" class="close" data-dismiss="alert">
+							<i class="ace-icon fa fa-times"></i>
+						</button>
+
+						<i class="ace-icon fa fa-check green"></i>
+
+						欢迎使用
+						<strong class="green">
+							合同商务办事易
+							<small>(v1.0)</small>
+						</strong>,
+						
+					</div>
+
+					<div class="row">
+						<div class="space-6"></div>
+
+						<div class="col-sm-7 infobox-container">
+
+
+							<div class="infobox infobox-blue">
+								<div class="infobox-icon">
+									<i class="ace-icon fa fa-twitter"></i>
+								</div>
+
+								<div class="infobox-data">
+									<span class="infobox-data-number">11</span>
+									<div class="infobox-content">新的采购</div>
+								</div>
+
+								<div class="badge badge-success">
+									+32%
+									<i class="ace-icon fa fa-arrow-up"></i>
+								</div>
+							</div>
+
+							<div class="infobox infobox-pink">
+								<div class="infobox-icon">
+									<i class="ace-icon fa fa-shopping-cart"></i>
+								</div>
+
+								<div class="infobox-data">
+									<span class="infobox-data-number">8</span>
+									<div class="infobox-content">正在开展</div>
+								</div>
+								<div class="stat stat-important">4%</div>
+							</div>
+
+							<div class="infobox infobox-red">
+								<div class="infobox-icon">
+									<i class="ace-icon fa fa-flask"></i>
+								</div>
+
+								<div class="infobox-data">
+									<span class="infobox-data-number">7</span>
+									<div class="infobox-content">延迟采购</div>
+								</div>
+							</div>
+
+							<div class="infobox infobox-orange2">
+								<div class="infobox-chart">
+									<span class="sparkline" data-values="196,128,202,177,154,94,100,170,224"></span>
+								</div>
+
+								<div class="infobox-data">
+									<span class="infobox-data-number">{{ users }}</span>
+									<div class="infobox-content">注册量</div>
+								</div>
+
+								<div class="badge badge-success">
+									7.2%
+									<i class="ace-icon fa fa-arrow-up"></i>
+								</div>
+							</div>
+
+
+
+							<div class="space-6"></div>
+
+							<div class="infobox infobox-green infobox-small infobox-dark">
+								<div class="infobox-progress">
+									<div class="easy-pie-chart percentage" data-percent="61" data-size="39">
+										<span class="percent">61</span>%
+									</div>
+								</div>
+
+								<div class="infobox-data">
+									<div class="infobox-content">任务</div>
+									<div class="infobox-content">完成率</div>
+								</div>
+							</div>
+
+							<div class="infobox infobox-blue infobox-small infobox-dark">
+								<div class="infobox-chart">
+									<span class="sparkline" data-values="3,4,2,3,4,4,2,2"></span>
+								</div>
+
+								<div class="infobox-data">
+									<div class="infobox-content">合同总额</div>
+									<div class="infobox-content">$32,000</div>
+								</div>
+							</div>
+
+							<div class="infobox infobox-grey infobox-small infobox-dark">
+								<div class="infobox-icon">
+									<i class="ace-icon fa fa-download"></i>
+								</div>
+
+								<div class="infobox-data">
+									<div class="infobox-content">文件下载</div>
+									<div class="infobox-content">1,205</div>
+								</div>
+							</div>
+						</div>
+						
+
+
+						<div class="vspace-12-sm"></div>
+						<div class="col-sm-5">
+							<div class="widget-box transparent" id="recent-box">
+								<div class="widget-header">
+									<h4 class="widget-title lighter smaller">
+										<i class="ace-icon fa fa-rss orange"></i>
+									</h4>
+
+									<div class="widget-toolbar no-border">
+										<ul class="nav nav-tabs" id="recent-tab">
+											<li class="active">
+												<a data-toggle="tab" href="#task-tab">部门职责</a>
+											</li>
+
+											<li>
+												<a data-toggle="tab" href="#member-tab">人员状态</a>
+											</li>
+
+											<li>
+												<a data-toggle="tab" href="#comment-tab">人员信息</a>
+											</li>
+										</ul>
+									</div>
+								</div>
+
+								<div class="widget-body">
+									<div class="widget-main padding-4">
+										<div class="tab-content padding-8">
+											<div id="task-tab" class="tab-pane active">
+												<h4 class="smaller lighter green">
+													<i class="ace-icon fa fa-list"></i>
+													职责
+												</h4>
+
+												<ul id="tasks" class="item-list">
+
+
+													<li class="item-blue clearfix">
+														<label class="inline">
+															<input type="checkbox" class="ace" />
+															<span class="lbl"> 合同谈判</span>
+														</label>
+													</li>
+
+													<li class="item-grey clearfix">
+														<label class="inline">
+															<input type="checkbox" class="ace" />
+															<span class="lbl"> 采购支持</span>
+														</label>
+													</li>
+
+													<li class="item-green clearfix">
+														<label class="inline">
+															<input type="checkbox" class="ace" />
+															<span class="lbl"> 发票开具</span>
+														</label>
+													</li>
+
+
+												</ul>
+											</div>
+
+											<div id="member-tab" class="tab-pane">
+												<div class="clearfix">
+													<div class="itemdiv memberdiv">
+														<div class="user">
+															<img alt="Bob Doe's avatar" src="{% static 'cms/assets/images/avatars/user.jpg' %}" />
+														</div>
+
+														<div class="body">
+															<div class="name">
+																<a href="#">李利</a>
+															</div>
+
+															<div class="time">
+																<i class="ace-icon fa fa-clock-o"></i>
+																<span class="green">部门主任</span>
+															</div>
+
+															<div>
+																<span class="label label-warning label-sm">出差</span>
+
+
+															</div>
+														</div>
+													</div>
+
+													
+
+													
+
+													<div class="itemdiv memberdiv">
+														<div class="user">
+															<img alt="Alex Doe's avatar" src="{% static 'cms/assets/images/avatars/avatar5.png' %}" />
+														</div>
+
+														<div class="body">
+															<div class="name">
+																<a href="#">焦杰</a>
+															</div>
+
+															<div class="time">
+																<i class="ace-icon fa fa-clock-o"></i>
+																<span class="green">高级经理</span>
+															</div>
+
+															<div>
+																<span class="label label-danger label-sm">休假</span>
+															</div>
+														</div>
+													</div>
+
+													
+
+													<div class="itemdiv memberdiv">
+														<div class="user">
+															<img alt="Susan's avatar" src="{% static 'cms/assets/images/avatars/avatar3.png' %}" />
+														</div>
+
+														<div class="body">
+															<div class="name">
+																<a href="#">卢瑶</a>
+															</div>
+
+															<div class="time">
+																<i class="ace-icon fa fa-clock-o"></i>
+																<span class="green">采购经理</span>
+															</div>
+
+															<div>
+																<span class="label label-success label-sm arrowed-in">在线</span>
+															</div>
+														</div>
+													</div>
+
+													<div class="itemdiv memberdiv">
+														<div class="user">
+															<img alt="Phil Doe's avatar" src="{% static 'cms/assets/images/avatars/avatar4.png' %}" />
+														</div>
+
+														<div class="body">
+															<div class="name">
+																<a href="#">顾毅</a>
+															</div>
+
+															<div class="time">
+																<i class="ace-icon fa fa-clock-o"></i>
+																<span class="green">采购经理</span>
+															</div>
+
+															<div>
+																<span class="label label-success label-sm arrowed-in">在线</span>
+															</div>
+														</div>
+													</div>
+
+
+												</div>
+
+												<div class="space-4"></div>
+
+												<div class="center">
+													<i class="ace-icon fa fa-users fa-2x green middle"></i>
+
+													&nbsp;
+													<a href="#" class="btn btn-sm btn-white btn-info">
+														查看所有人员信息
+														<i class="ace-icon fa fa-arrow-right"></i>
+													</a>
+												</div>
+
+												<div class="hr hr-double hr8"></div>
+											</div><!-- /.#member-tab -->
+
+											<div id="comment-tab" class="tab-pane">
+												<div class="comments">
+													<div class="itemdiv commentdiv">
+														<div class="user">
+															<img alt="Bob Doe's Avatar" src="{% static 'cms/assets/images/avatars/avatar.png' %}" />
+														</div>
+
+														<div class="body">
+															<div class="name">
+																<a href="#">秦伟</a>
+															</div>
+
+
+
+															<div class="text">
+																<i class="ace-icon fa fa-quote-left"></i>
+																部门采购经理，目前负责反应堆中心采购
+															</div>
+														</div>
+
+
+													</div>																
+												</div>
+
+												<div class="hr hr8"></div>
+
+												<div class="center">
+													<i class="ace-icon fa fa-comments-o fa-2x green middle"></i>
+
+													&nbsp;
+													<a href="#" class="btn btn-sm btn-white btn-info">
+														查看所有人员信息
+														<i class="ace-icon fa fa-arrow-right"></i>
+													</a>
+												</div>
+
+												<div class="hr hr-double hr8"></div>
+											</div>
+										</div>
+									</div><!-- /.widget-main -->
+								</div><!-- /.widget-body -->
+							</div><!-- /.widget-box -->
+						</div><!-- /.col -->
+
+
+					</div><!-- /.row -->
+
+					<!-- PAGE CONTENT ENDS -->
+				</div><!-- /.col -->
+			</div><!-- /.row -->
+					
+	{% endblock %}			
+
+
+
+

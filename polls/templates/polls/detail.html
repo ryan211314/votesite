@@ -9,4 +9,7 @@
     <label for="choice{{ forloop.counter }}">{{ choice.choice_text }}</label><br />
 {% endfor %}
 <input type="submit" value="Vote" />
+ <a href="{% url 'polls:ansQuestion' question.id %}" class="list-group-item">文献搜索答案</a>
+ <a href="{% url 'polls:detail' question.id|add:-1 %}" class="list-group-item">上一个</a>
+  <a href="{% url 'polls:detail' question.id|add:1 %}" class="list-group-item">下一个</a>
 </form>

@@ -16,12 +16,17 @@ Including another URLconf
 from django.conf.urls import include,url
 from django.contrib import admin
 from django.contrib.auth import views as auth_views
+from polls import views
+
+handler404='views.not_found_view'
+
 
 urlpatterns = [
 
+    
     url(r'^admin/', admin.site.urls),
     url(r'^polls/', include('polls.urls'), name='polls'),
-    url(r'^$', include('polls.urls'), name='polls'),
+    url(r'^$', views.index),
     #url(r'^grade/', include('grade.urls'), name='grade'),
 
 ]

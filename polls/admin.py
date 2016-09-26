@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Question,Choice,GradeQuestion,Grade
+from .models import *
 
 
 
@@ -29,5 +29,9 @@ class GradeQuestionAdmin(admin.ModelAdmin):
 admin.site.register(Question, QuestionAdmin)
 admin.site.register(GradeQuestion, GradeQuestionAdmin)
 admin.site.register(Choice)
+admin.site.register(PersonGroup)
+admin.site.register(Membership)
+admin.site.register(LimitQuestion)
 # admin.site.register(Person)
-# admin.site.register(Doc)
+admin.site.register(Doc)
+admin.site.register(DocType)
